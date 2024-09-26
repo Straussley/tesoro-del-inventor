@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tesoro del Inventor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script> <!-- Librería Panzoom -->
+</head>
+<body>
+    <div class="container">
+        <h1>El Laboratorio del Inventor</h1>
+        <div id="puzzle-image-container">
+            <!-- Imagen del laboratorio con zoom habilitado -->
+            <img id="lab-image" src="assets/lab_image.jpg" alt="Laboratorio del Inventor">
+        </div>
+        <!-- Contenedor de la nueva imagen (oculto al inicio) -->
+        <div id="clickable-image" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
+        <img src="assets/new_image.jpg" alt="Imagen clickeable" style="max-width: 90%; max-height: 90%;">
+        </div>
+
+        <!-- Minijuego (oculto al inicio) -->
+        <div id="minigame-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <h2>Resuelve el Acertijo</h2>
+                <p>Elige la combinación correcta para desactivar el sistema:</p>
+                <input type="text" id="combination-input" placeholder="Introduce la combinación">
+                <button id="check-combination">Comprobar</button>
+                <p id="result-message" style="display:none;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script> <!-- Archivo JS -->
+</body>
+</html>
